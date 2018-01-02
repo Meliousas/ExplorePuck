@@ -13,21 +13,25 @@
         android:orientation="vertical">
 
         <ImageView
+            android:background="@color/white"
             android:id="@+id/imageView"
-            android:layout_width="200dp"
+            android:layout_width="384dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
             android:src="@drawable/oppng" />
 
         <TextView
+            android:layout_marginTop="15"
+            android:textAlignment="center"
+            android:background="@color/white"
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:layout_width="384dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:fontFamily="serif"
+            android:fontFamily="sans-serif-medium"
             android:text="@string/app_name"
-            android:textAllCaps="false"
+            android:textAllCaps="true"
             android:textColor="#000000"
-            android:textSize="26sp" />
+            android:textSize="36sp" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
