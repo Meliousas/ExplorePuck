@@ -1,35 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="fill_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backapp"
     tools:layout_editor_absoluteY="25dp">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical">
 
         <ImageView
-            android:background="@color/white"
             android:id="@+id/imageView"
-            android:layout_width="384dp"
+            android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_gravity="center"
             android:src="@drawable/oppng" />
 
         <TextView
-            android:layout_marginTop="15px"
-            android:textAlignment="center"
-            android:background="@color/white"
             android:id="@+id/textView"
-            android:layout_width="384dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="15px"
             android:fontFamily="sans-serif-medium"
             android:text="@string/app_name"
+            android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="#000000"
             android:textSize="36sp" />
