@@ -21,7 +21,7 @@
             android:src="@drawable/oppng" />
 
         <TextView
-            android:layout_marginTop="15"
+            android:layout_marginTop="15px"
             android:textAlignment="center"
             android:background="@color/white"
             android:id="@+id/textView"
