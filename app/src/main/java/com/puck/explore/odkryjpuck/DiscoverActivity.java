@@ -41,7 +41,7 @@ public class DiscoverActivity extends AppCompatActivity{
 
      recyclerView = findViewById(R.id.recyclerview);
      movies = new ArrayList<>();
-     getMoviesFromDB(0);
+     //getMoviesFromDBMock(0);
 
      gridLayout = new GridLayoutManager(this, 2);
      recyclerView.setLayoutManager(gridLayout);
@@ -54,11 +54,24 @@ public class DiscoverActivity extends AppCompatActivity{
          public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
 
              if (gridLayout.findLastCompletelyVisibleItemPosition() == movies.size() - 1) {
-                   getMoviesFromDB(movies.get(movies.size() - 1).getId());
+                   getMoviesFromDBMock(movies.get(movies.size() - 1).getId());
              }
 
          }
      });
+ }
+
+ private void getMoviesFromDBMock(int id){
+     Discover discover = new Discover(0, "discover", "Muzeum Ziemii Puckiej", "ul. Paderewskiego 11", "opsiiki", "");
+     Discover discover1 = new Discover(1, "discover", "Pucki Ratusz", "ul. Paderewskiego 11", "opis", "");
+     Discover discover2 = new Discover(2, "discover", "Fara Pucka","ul. Paderewskiego 11", "drugiopis", "" );
+
+     List<CategoryItem> items = new ArrayList<>();
+     items.add(discover);
+     items.add(discover1);
+
+     DiscoverActivity.this.movies.addAll(items);
+
  }
 
     private void getMoviesFromDB(int id) {
@@ -68,7 +81,7 @@ public class DiscoverActivity extends AppCompatActivity{
 
                 OkHttpClient client = new OkHttpClient();
                 Request request = new Request.Builder()
-                            .url("http://localhost/op.php?id=" + movieIds[0])
+                            .url("http://192.168.1.35/movies.php?id=" + movieIds[0])
                         .build();
                 try {
                     Response response = client.newCall(request).execute();
