@@ -23,7 +23,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".CategoryActivity">
+        <activity android:name=".DiscoverActivity">
             <intent-filter>
                 <action android:name="com.puck.explore.odkryjpuck.CategoryActivity" />
 

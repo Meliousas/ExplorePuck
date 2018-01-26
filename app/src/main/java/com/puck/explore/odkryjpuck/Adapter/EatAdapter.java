@@ -13,21 +13,24 @@ import com.bumptech.glide.Glide;
 import com.puck.explore.odkryjpuck.MenuActivity;
 import com.puck.explore.odkryjpuck.R;
 import com.puck.explore.odkryjpuck.model.CategoryItem;
+import com.puck.explore.odkryjpuck.model.Eat;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by Mela on 2018-01-25.
  */
 
-public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
+public class EatAdapter extends RecyclerView.Adapter<EatAdapter.ViewHolder> {
     private Context context;
-    private List<CategoryItem> movies;
+    private List<Eat> movies;
 
-    public CategoryAdapter(Context context, List<CategoryItem> movies) {
+    public EatAdapter(Context context, List<Eat> movies) {
         this.context = context;
         this.movies = movies;
     }
+
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -68,7 +71,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
 
         @Override
         public void onClick(View v) {
-          //  int position = getAdapterPosition();
+            //  int position = getAdapterPosition();
             Intent intent = new Intent(context, MenuActivity.class);
             context.startActivity(intent);
         }

@@ -14,7 +14,12 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     public void discoverClick(View view) {
-        Intent intent = new Intent(MenuActivity.this, CategoryActivity.class);
+        Intent intent = new Intent(MenuActivity.this, DiscoverActivity.class);
+        startActivity(intent);
+    }
+
+    public void eatClick(View view) {
+        Intent intent = new Intent(MenuActivity.this, DiscoverActivity.class);
         startActivity(intent);
     }
 }
