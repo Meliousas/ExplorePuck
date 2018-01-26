@@ -4,41 +4,15 @@ package com.puck.explore.odkryjpuck.model;
  * Created by Mela on 2017-12-30.
  */
 
-public class Discover {
+public class Discover extends CategoryItem {
 
-    public String name;
-    public String desc;
-    public String imageSrc;
-
-    public Discover(String name, String desc, String imageSrc) {
+    public Discover(int id, String category, String name, String address, String desc, String imageSrc) {
+        this.id = id;
+        this.category =category;
         this.name = name;
+        this.address = address;
         this.desc = desc;
         this.imageSrc = imageSrc;
     }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDesc() {
-        return desc;
-    }
-
-    public void setDesc(String desc) {
-        this.desc = desc;
-    }
-
-    public String getImageSrc() {
-        return imageSrc;
-    }
-
-    public void setImageSrc(String imageSrc) {
-        this.imageSrc = imageSrc;
-    }
-
 
 }
